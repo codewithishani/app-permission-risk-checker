@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>App Permission Risk Checker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HOME / ANALYSIS PAGE
+         ========================================== -->
+
+    <main id="homePage">
+
+        <div class="container">
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <div class="header-icon">
+                    🔐
+                </div>
+
+                <div class="header-content">
+
+                    <div class="badge">
+                        🛡️ ISCL MICROPROJECT
+                    </div>
+
+                    <h1>
+                        App Permission
+                        <span>Risk Checker</span>
+                    </h1>
+
+                    <p>
+                        Analyze application permissions and understand
+                        potential privacy risks before granting access.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- INTRO -->
+
+            <section class="intro-card">
+
+                <div class="intro-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <h3>
+                        Smart Permission Analysis
+                    </h3>
+
+                    <p>
+                        Select a reference application or enter your own
+                        app details. Review its permissions and receive an
+                        educational privacy-risk assessment.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- APP INFORMATION -->
+
+            <section class="card">
+
+                <div class="section-title">
+
+                    <div class="title-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            App Information
+                        </h2>
+
+                        <p>
+                            Enter application details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <!-- APP NAME -->
+
+                    <div class="form-group">
+
+                        <label for="appName">
+                            App Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="appName"
+                            placeholder="Enter app name"
+                        >
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label for="appCategory">
+                            App Category
+                        </label>
+
+                        <select id="appCategory">
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="Social Media">
+                                Social Media
+                            </option>
+
+                            <option value="Messaging">
+                                Messaging
+                            </option>
+
+                            <option value="Photography">
+                                Photography
+                            </option>
+
+                            <option value="Navigation">
+                                Navigation
+                            </option>
+
+                            <option value="Shopping">
+                                Shopping
+                            </option>
+
+                            <option value="Entertainment">
+                                Entertainment
+                            </option>
+
+                            <option value="Education">
+                                Education
+                            </option>
+
+                            <option value="Gaming">
+                                Gaming
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REFERENCE APPS -->
+
+                <div class="example-area">
+
+                    <div class="example-label">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <label for="exampleApp">
+                            Reference App Profiles
+                        </label>
+
+                    </div>
+
+                    <p>
+                        Choose a sample profile to automatically load
+                        predefined permissions for demonstration.
+                    </p>
+
+                    <select id="exampleApp">
+
+                        <option value="">
+                            Choose a reference application
+                        </option>
+
+                        <optgroup label="Popular Apps">
+
+                            <option value="whatsapp">
+                                💬 WhatsApp
+                            </option>
+
+                            <option value="instagram">
+                                📸 Instagram
+                            </option>
+
+                            <option value="facebook">
+                                👥 Facebook
+                            </option>
+
+                            <option value="snapchat">
+                                👻 Snapchat
+                            </option>
+
+                            <option value="maps">
+                                🗺️ Google Maps
+                            </option>
+
+                        </optgroup>
+
+                        <optgroup label="Demo Applications">
+
+                            <option value="photo">
+                                📷 Photo Editor
+                            </option>
+
+                            <option value="messaging">
+                                💬 Messaging App
+                            </option>
+
+                            <option value="shopping">
+                                🛒 Shopping App
+                            </option>
+
+                            <option value="game">
+                                🎮 Game
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- PERMISSIONS -->
+
+            <section class="card">
+
+                <div class="section-title">
+
+                    <div class="title-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            App Permissions
+                        </h2>
+
+                        <p>
+                            Select permissions requested by the application
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="permission-note">
+
+                    🔎 <strong>Security Tip:</strong>
+                    Grant only the permissions that are necessary
+                    for the application's intended features.
+
+                </div>
+
+
+                <div class="permissions-grid">
+
+                    <!-- CAMERA -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="camera"
+                        >
+
+                        <span class="permission-icon">
+                            📷
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                Camera
+                            </strong>
+
+                            <small>
+                                Access device camera
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- MICROPHONE -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="microphone"
+                        >
+
+                        <span class="permission-icon">
+                            🎤
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                Microphone
+                            </strong>
+
+                            <small>
+                                Record audio
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- LOCATION -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="location"
+                        >
+
+                        <span class="permission-icon">
+                            📍
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                Location
+                            </strong>
+
+                            <small>
+                                Access device location
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- CONTACTS -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="contacts"
+                        >
+
+                        <span class="permission-icon">
+                            👥
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                Contacts
+                            </strong>
+
+                            <small>
+                                Access saved contacts
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- SMS -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="sms"
+                        >
+
+                        <span class="permission-icon">
+                            💬
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                SMS
+                            </strong>
+
+                            <small>
+                                Access text messages
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- PHONE -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="phone"
+                        >
+
+                        <span class="permission-icon">
+                            📞
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                Phone
+                            </strong>
+
+                            <small>
+                                Access phone functions
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- FILES -->
+
+                    <label class="permission-card">
+
+                        <input
+                            type="checkbox"
+                            class="permission"
+                            value="files"
+                        >
+
+                        <span class="permission-icon">
+                            📁
+                        </span>
+
+                        <span class="permission-content">
+
+                            <strong>
+                                Files & Storage
+                            </strong>
+
+                            <small>
+                                Access device files
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- COUNT -->
+
+                <div class="selected-info">
+
+                    <div>
+
+                        <span>
+                            Selected Permissions
+                        </span>
+
+                        <small>
+                            Permissions currently selected
+                        </small>
+
+                    </div>
+
+                    <strong id="permissionCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- ANALYZE BUTTON -->
+
+            <section class="action-section">
+
+                <button
+                    id="analyzeBtn"
+                    class="primary-btn"
+                >
+                    🔍 Analyze Risk
+                </button>
+
+                <button
+                    id="resetBtn"
+                    class="secondary-btn"
+                >
+                    ↻ Reset
+                </button>
+
+            </section>
+
+
+            <!-- ABOUT -->
+
+            <section class="about-section">
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        🔐
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            About This Project
+                        </h3>
+
+                        <p>
+                            The App Permission Risk Checker is an
+                            educational ISCL project designed to create
+                            awareness about application permissions and
+                            privacy risks.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        ⚙️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            How It Works
+                        </h3>
+
+                        <p>
+                            The system assigns predefined risk points to
+                            selected permissions, calculates a score out
+                            of 10, and classifies the result as Low,
+                            Medium, or High Risk.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer>
+
+                <div class="footer-icon">
+                    🛡️
+                </div>
+
+                <strong>
+                    App Permission Risk Checker
+                </strong>
+
+                <span>
+                    Information Security & Cyber Laws • ISCL Microproject
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         RESULT PAGE
+         ========================================== -->
+
+    <main
+        id="resultPage"
+        class="result-page hidden"
+    >
+
+        <div class="container">
+
+            <!-- RESULT HEADER -->
+
+            <header class="result-header">
+
+                <button
+                    id="backBtn"
+                    class="back-btn"
+                >
+                    ← Back to Analysis
+                </button>
+
+                <div class="result-header-content">
+
+                    <div class="result-header-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <div class="badge blue-badge">
+                            🛡️ SECURITY ANALYSIS
+                        </div>
+
+                        <h1>
+                            Risk Analysis
+                            <span>Result</span>
+                        </h1>
+
+                        <p>
+                            Permission-based educational security assessment
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- APP SUMMARY -->
+
+            <section class="card">
+
+                <div class="section-title">
+
+                    <div class="title-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Application Summary
+                        </h2>
+
+                        <p>
+                            Details of the analyzed application
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="app-summary">
+
+                    <div>
+
+                        <span>
+                            Application
+                        </span>
+
+                        <strong id="resultAppName">
+                            -
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Category
+                        </span>
+
+                        <strong id="resultCategory">
+                            -
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Permissions
+                        </span>
+
+                        <strong id="resultPermissionCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SCORE -->
+
+            <section class="card score-card">
+
+                <div class="score-heading">
+
+                    <div>
+
+                        <span>
+                            PRIVACY RISK ASSESSMENT
+                        </span>
+
+                        <h2>
+                            Overall Risk Score
+                        </h2>
+
+                    </div>
+
+                    <div class="score-label">
+                        / 10
+                    </div>
+
+                </div>
+
+
+                <div class="score-area">
+
+                    <div
+                        class="score-circle"
+                        id="scoreCircle"
+                    >
+
+                        <span id="scoreValue">
+                            0
+                        </span>
+
+                        <small>
+                            /10
+                        </small>
+
+                    </div>
+
+
+                    <div class="risk-details">
+
+                        <h3 id="riskLevel">
+                            -
+                        </h3>
+
+                        <p id="riskMessage">
+                            Analyze the selected permissions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SELECTED PERMISSIONS -->
+
+            <section class="card">
+
+                <div class="result-heading">
+
+                    <div>
+
+                        <h2>
+                            🔎 Selected Permissions
+                        </h2>
+
+                        <p>
+                            Access requested by the application
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="selectedPermissions"
+                    class="selected-list"
+                >
+                    No permissions selected.
+                </div>
+
+            </section>
+
+
+            <!-- RECOMMENDATIONS -->
+
+            <section class="card">
+
+                <div class="result-heading">
+
+                    <div>
+
+                        <h2>
+                            🛡️ Security Recommendations
+                        </h2>
+
+                        <p>
+                            Privacy awareness tips based on the analysis
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <ul id="recommendations">
+
+                    <li>
+                        Review permissions before granting access.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- SECURITY TIPS -->
+
+            <section class="tips-grid">
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Protect Your Privacy
+                        </h3>
+
+                        <p>
+                            Avoid granting unnecessary access to
+                            sensitive device features.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <div class="tip-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Review Carefully
+                        </h3>
+
+                        <p>
+                            Check whether each requested permission
+                            matches the application's purpose.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DISCLAIMER -->
+
+            <section class="result-note">
+
+                <span>
+                    ℹ️
+                </span>
+
+                <p>
+                    <strong>Educational Disclaimer:</strong>
+                    This assessment uses a predefined educational
+                    scoring model based on selected permissions.
+                    It does not represent complete security verification
+                    of an application. Reference app profiles are sample
+                    profiles and may differ from actual permissions
+                    depending on app and operating-system versions.
+                </p>
+
+            </section>
+
+
+            <!-- NEW ANALYSIS -->
+
+            <section class="new-analysis">
+
+                <button
+                    id="newAnalysisBtn"
+                    class="primary-btn"
+                >
+                    🔄 Analyze Another App
+                </button>
+
+            </section>
+
+
+            <!-- RESULT FOOTER -->
+
+            <footer>
+
+                <div class="footer-icon">
+                    🔐
+                </div>
+
+                <strong>
+                    App Permission Risk Checker
+                </strong>
+
+                <span>
+                    ISCL Microproject • Privacy Awareness & Security
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
